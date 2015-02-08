@@ -1,0 +1,77 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,700);
+
+body{
+  font-family: "Roboto";
+  cursor: default;
+  -webkit-user-select: none;
+  background: rgb(252,88,67);
+  color: white;
+}
+
+.main{
+  text-align: center;
+}
+
+section.step{
+
+}
+
+section.step.hidden{
+  display: none;
+}
+
+h3{
+  margin-bottom: 0;
+}
+
+input, select{
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+select{
+  min-width: 200px;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0,255,0,0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.error{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  background: rgba(255,0,0,0.8);
+  border-radius: 5px;
+}
+
+a.button{
+  display: inline-block;
+  margin-top: 20px;
+  background: rgba(0,255,0,.6);
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-transition: background .1s;
+}
+
+a.button:hover{
+  background: rgba(0,255,0,.8);
+}
+
+a.button:active{
+  background: rgba(0,255,0,.5)
+}

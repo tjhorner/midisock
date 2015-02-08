@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MIDIsock</title>
+  <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+  <div class="main">
+    <section class="step" id="step-0">
+      <h1>Hi!</h1>
+      <h2>Let's get you set up with MIDIsock</h2>
+      <a class="button next" data-next-callback="test">Let's Go!</a>
+    </section>
+
+    <section class="step" id="step-1">
+      <h1>Server or Client?</h1>
+      <h2>Servers get MIDI I/O, clients send</h2>
+      <a class="button next" data-next-callback="chooseServer">Server</a>
+      <a class="button next" data-next-callback="chooseClient">Client</a>
+    </section>
+
+    <section class="step" id="step-2">
+      <div class="client-only">
+        <h1>MIDI Devices</h1>
+        <h2>Select your MIDI controller</h2>
+        <select size="5" data-key="midiPort" id="mididevices">
+        </select><br>
+        <a class="button" id="refresh">Refresh</a>
+        <a class="button next" data-next-callback="chooseMidiDevice">Next</a>
+      </div>
+
+      <div class="server-only">
+        <h1>You're all set!</h1>
+        Your server is listening at <span id="server-ip">127.0.0.1:3000</span>.<br>
+        <h3><span id="clients-connected">0</span> clients connected</h3>
+        <a class="button next" data-next-callback="exitApplication">Shut Down</a>
+      </div>
+    </section>
+
+    <section class="step" id="step-3">
+      <h1>Server IP</h1>
+      <h2>Enter the server's IP here</h2>
+      <input type="text" data-key="serverIp" value="127.0.0.1:3000"><br>
+      <a class="button next" data-next-callback="chooseServerIp">Next</a>
+    </section>
+
+    <section class="step" id="step-4">
+      <h1>Client Status</h1>
+      <h2 id="connectioninfo">Opening connection...</h2>
+      <a class="button next" data-next-callback="exitApplication">Exit</a>
+    </section>
+
+    <div class="error" style="display: none">
+
+    </div>
+  </div>
+  <script src="js/jquery.js"></script>
+  <script src="js/socket.io.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

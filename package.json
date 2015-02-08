@@ -1,0 +1,14 @@
+{
+  "name": "MIDIsock",
+  "main": "index.html",
+  "window": {
+    "position": "center",
+    "width": 400,
+    "height": 300,
+    "toolbar": false,
+    "resizable": false
+  },
+  "dependencies": {
+    "midi": "~0.9.0"
+  }
+}
