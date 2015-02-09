@@ -7,7 +7,7 @@ A program that allows MIDI messages to be sent wirelessly.
 - Node.js
 - nw.js v0.8.6
 - C/C++ compiler such as GCC
-- ALSA
+- ALSA if on Linux
 
 ## Server Requirements
 

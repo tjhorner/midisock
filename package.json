@@ -6,9 +6,11 @@
     "width": 400,
     "height": 300,
     "toolbar": false,
-    "resizable": false
+    "resizable": false,
+    "icon": "img/logo.png"
   },
   "dependencies": {
-    "midi": "~0.9.0"
+    "midi": "~0.9.0",
+    "socket.io": "~1.3.3"
   }
 }

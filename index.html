@@ -23,17 +23,29 @@
       <div class="client-only">
         <h1>MIDI Devices</h1>
         <h2>Select your MIDI controller</h2>
-        <select size="5" data-key="midiPort" id="mididevices">
+        <select size="5" data-key="midiPort" class="mididevices">
         </select><br>
-        <a class="button" id="refresh">Refresh</a>
+        <a class="button refresh">Refresh</a>
         <a class="button next" data-next-callback="chooseMidiDevice">Next</a>
       </div>
 
       <div class="server-only">
-        <h1>You're all set!</h1>
-        Your server is listening at <span id="server-ip">127.0.0.1:3000</span>.<br>
-        <h3><span id="clients-connected">0</span> clients connected</h3>
-        <a class="button next" data-next-callback="exitApplication">Shut Down</a>
+        <div class="windows-only">
+          <h1>Virtual MIDI Port</h1>
+          Since you're using Windows, you'll need a seperate program for MIDI I/O
+          such as <a href="http://www.nerds.de/en/download.html" target="_browser">LoopBe1</a>.<br><br>
+          <select size="5" data-key="midiPort" class="mididevices">
+          </select><br>
+          <a class="button refresh">Refresh</a>
+          <a class="button next" data-next-callback="chooseVirtualPort">Next</a>
+        </div>
+
+        <div class="other-platforms">
+          <h1>You're all set!</h1>
+          Your server is listening at <span id="server-ip">127.0.0.1:3000</span>.<br>
+          <h3><span id="clients">0</span> clients connected</h3>
+          <a class="button next" data-next-callback="exitApplication">Shut Down</a>
+        </div>
       </div>
     </section>
 
@@ -50,9 +62,7 @@
       <a class="button next" data-next-callback="exitApplication">Exit</a>
     </section>
 
-    <div class="error" style="display: none">
-
-    </div>
+    <div class="error" style="display: none"></div>
   </div>
   <script src="js/jquery.js"></script>
   <script src="js/socket.io.js"></script>
