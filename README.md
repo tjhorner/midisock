@@ -7,11 +7,18 @@ A program that allows MIDI messages to be sent wirelessly.
 - Node.js
 - nw.js v0.8.6
 - C/C++ compiler such as GCC
-- ALSA if on Linux
+- Python
 
 ## Server Requirements
 
-- Linux/OSX
+**If you're on Windows**
+
+- A virtual MIDI device such as [LoopBe1](http://www.nerds.de/en/download.html)
+
+**If you're on Linux/OSX**
+
+- `libasound2-dev` package
+- ALSA, installed and configured
 
 ## Building Modules
 
